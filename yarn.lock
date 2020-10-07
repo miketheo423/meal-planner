@@ -6757,6 +6757,11 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.8.1, react-is@^16.8.4, react-
   resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
+react-native-draggable-flatlist@^2.4.0:
+  version "2.4.0"
+  resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/react-native-draggable-flatlist/-/react-native-draggable-flatlist-2.4.0.tgz#3aa2b4762c7473315c8d10caebb05455fc3e5b9e"
+  integrity sha1-OqK0dix0czFcjRDK67BUVfw+W54=
+
 react-native-gesture-handler@~1.7.0:
   version "1.7.0"
   resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz#0ef74a5ba836832e497dc49eb1ce58baa6c617e5"
@@ -6771,6 +6776,13 @@ react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha1-ZF4v+7tJ6AhEu0y740oSb9oeZ3I=
+
+react-native-reanimated@~1.13.0:
+  version "1.13.1"
+  resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/react-native-reanimated/-/react-native-reanimated-1.13.1.tgz#c370c32cc4d447ae896cb029bb9c6a2f7608c5b4"
+  integrity sha1-w3DDLMTUR66JbLApu5xqL3YIxbQ=
+  dependencies:
+    fbjs "^1.0.0"
 
 react-native-safe-area-context@3.1.4:
   version "3.1.4"
