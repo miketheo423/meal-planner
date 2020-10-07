@@ -4,36 +4,48 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 import DraggableFlatList from 'react-native-draggable-flatlist';
 
-const exampleData = [...Array(20)].map((d, index) => ({
-  key: `item-${index}`, // For example only -- don't use index as your key!
-  label: index,
-  backgroundColor: `rgb(${Math.floor(Math.random() * 255)}, ${
-    index * 5
-  }, ${132})`,
-}));
+const exampleData = [
+  {
+    key: 'soy-milk-1',
+    label: 'Soy Milk',
+  },
+  {
+    key: 'Potatoes',
+    label: 'Potatoes',
+  },
+  {
+    key: 'Onion',
+    label: 'Onion',
+  },
+];
+
 export default function ShoppingListScreen() {
   const [data, setData] = useState(exampleData);
-  const renderItem = ({ item, index, drag, isActive }) => {
+  const renderItem = ({ item, index, drag, isActive }: any) => {
     return (
-      <TouchableOpacity
-        style={{
-          height: 100,
-          backgroundColor: isActive ? 'blue' : item.backgroundColor,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-        onLongPress={drag}
-      >
-        <Text
+      <>
+        <TouchableOpacity
           style={{
-            fontWeight: 'bold',
-            color: 'white',
-            fontSize: 32,
+            height: 48,
+            justifyContent: 'center',
+            opacity: isActive ? 0.7 : 1,
           }}
+          onLongPress={drag}
         >
-          {item.label}
-        </Text>
-      </TouchableOpacity>
+          <Text
+            style={{
+              fontSize: 20,
+            }}
+          >
+            {item.label}
+          </Text>
+        </TouchableOpacity>
+        <View
+          style={{ height: 2 }}
+          lightColor='#eee'
+          darkColor='rgba(255,255,255,0.1)'
+        />
+      </>
     );
   };
 
@@ -52,8 +64,7 @@ export default function ShoppingListScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    paddingHorizontal: 16,
   },
   title: {
     fontSize: 20,
